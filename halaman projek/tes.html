@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="tes.css">
+  <title>webKelompok5</title>
+  </style>
+</head>
+<body>
+<div class="bagian-1">
+  <video id="bgVideo" class="bg-video" autoplay loop muted playsinline src="video/shir.mp4"></video>
+  <img id="bgpoto" src="gambar/walpaper/walpaper Nissan S13 180sx.jpeg alt="logo" class="logo" />
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="gambar/icon user.jpg" alt="logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#welcome-section">Home</a></li>
+        <li><a href="#kartu">Anggota</a></li>
+        <li><a href="#projek-section">Projek</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="komentar.html" target="_blank">Halaman Komentar</a></li>
+      </ul>
+      <div class="nav-right" id="nav-right">
+        <div class="dropdown">
+          <button class="setting-btn dropbtn" onclick="toggleDropdown()">Setting &#9881;</button>
+          <ul id="settingsDropdown" class="dropdown-content hidden">
+            <li onclick="openSection('music')">Music</li>
+            <li onclick="openSection('backgroundVideo')">Background Video</li>
+            <li onclick="openSection('tema')">Tema</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Selamat Datang Section -->
+  <section id="welcome-section" style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:60px;">
+    <h1 style="color:white;font-size:2.2rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.25);margin-bottom:18px;letter-spacing:1px;">
+      Selamat Datang di Web Kelompok 5
+    </h1>
+    <p style="color:#e0f7fa;font-size:1.1rem;text-shadow:0 1px 4px rgba(0,0,0,0.15);margin-bottom:40px;">
+      Silakan scroll ke bawah untuk melihat kartu nama anggota kelompok.
+    </p>
+    <div style="width:32px;height:32px;animation:bounceDown 1.2s infinite;">
+      <svg width="32" height="32" fill="#fff" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.41-1.42L12 13.67l6.59-6.59L20 8.5z"/></svg>
+    </div>
+  </section>
+</div>
+<div class="bagian-2">
+  <!-- Kartu Nama Section -->
+  <div class="kartu-nama-section-bg">
+    <section id="kartu-nama-section" style="display:flex;justify-content:center;align-items:flex-start;width:100%;margin-top:60px;">
+      <div class="kartu-nama-wrapper">
+        <div class="cards-container" style="flex-direction:column;gap:32px;max-width:700px;">
+          <!-- Baris 1 -->
+          <div style="display:flex;gap:32px;justify-content:center;" >
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <img class="profile-pic" src="gambar/sidqiw.jpg" alt="Profile Photo">
+                      <div class="profile-name">Sidqiw</div>
+                      <div class="profile-job">Developer</div>
+                      <div class="mt-6 text-center card-element delay-3">
+                          <p class="text-white text-opacity-80 text-sm mb-1">📧 sidqiw@gmail.com</p>
+                          <p class="text-white text-opacity-80 text-sm">📱 +62 858-9290-4928</p>
+                      </div>
+                      <div class="social-icons card-element delay-4">
+                          <!-- ...social icons... -->
+                      </div>
+                      <a href="#website" class="btn-website card-element delay-5">Visit Website</a>
+                      <p class="flip-hint">Click to flip</p>
+                  </div>
+                  <div class="card-back">
+                      <h3 class="text-white text-xl font-semibold mb-4">Tentang Saya</h3>
+                      <p class="text-white text-opacity-90 text-sm mb-6">
+                          Halo! Saya seorang developer yang sedang dalam proses mengembangkan website. Ini adalah bagian dari perjalanan belajar saya di dunia coding.
+                      </p>
+                      <h3 class="text-white text-xl font-semibold mb-3">Skills</h3>
+                      <p class="text-white text-opacity-90 text-sm mb-1">
+                          CSS/JS/UI/UX/FIGMA
+                          <span class="skill-level">Advanced</span>
+                      </p>
+                      <div class="skill-blocks">
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block filled"></span>
+                          <span class="block"></span>
+                      </div>
+                      <p class="flip-hint">Click to flip back</p>
+                  </div>
+              </div>
+            </div>
+            <div id="kartu"></div>
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img class="profile-pic" src="gambar/fahry.jpg" alt="Profile Photo">
+                  <div class="profile-name">Fahry </div>
+                  <div class="profile-job">Front-End Developer</div>
+                  <div class="mt-6 text-center card-element delay-3">
+                    <p class="text-white text-opacity-80 text-sm mb-1">📧 fhry@gmai.com</p>
+                    <p class="text-white text-opacity-80 text-sm">📱 +62 123-987-6543</p>
+                  </div>
+                  <div class="social-icons card-element delay-4">
+                    <!-- ...social icons... -->
+                  </div>
+                  <a href="#website" class="btn-website card-element delay-5">Visit Website</a>
+                  <p class="flip-hint">Click to flip</p>
+                </div>
+                <div class="card-back">
+                  <h3 class="text-white text-xl font-semibold mb-4">Tentang Saya</h3>
+                  <p class="text-white text-opacity-90 text-sm mb-6">
+                    Seorang pelajar yang sedang menekuni dunia koding. Saat ini fokus belajar dan membangun website sebagai bagian dari proses belajar.
+                    </p>
+                  <h3 class="text-white text-xl font-semibold mb-3">Skills</h3>
+                  <p class="text-white text-opacity-90 text-sm mb-1">
+                   HTML/CSS
+                    <span class="skill-level">Intermediate</span>
+                  </p>
+                  <div class="skill-blocks">
+                    <span class="block filled"></span>
+                    <span class="block filled"></span>
+                    <span class="block filled"></span>
+                    <span class="block filled"></span>
+                    <span class="block filled"></span>
+                    <span class="block filled"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                  </div>
+                  <p class="flip-hint">Click to flip back</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Baris 2 -->
+          <div style="display:flex;gap:32px;justify-content:center;margin-top:32px;">
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img class="profile-pic" src="gambar/niswa.jpg" alt="Profile Photo">
+                  <div class="profile-name">Niswa</div>
+                  <div class="profile-job">Back-End Developer</div>
+                  <div class="mt-6 text-center card-element delay-3">
+                    <p class="text-white text-opacity-80 text-sm mb-1">📧 NISWA@gmail.com</p>
+                    <p class="text-white text-opacity-80 text-sm">📱 +62 123-456-6543</p>
+                </div>
+                <div class="social-icons card-element delay-4">
+                  <!-- ...social icons... -->
+                </div>
+                <a href="#website" class="btn-website card-element delay-5">Visit Website</a>
+                <p class="flip-hint">Click to flip</p>
+              </div>
+              <div class="card-back">
+                <h3 class="text-white text-xl font-semibold mb-4">Tentang Saya</h3>
+                <p class="text-white text-opacity-90 text-sm mb-6">
+                  Saya adalah seorang pelajar yang sedang belajar menjadi pengembang back-end, dengan fokus pada pembuatan API dan pengelolaan basis data.
+                </p>
+                <h3 class="text-white text-xl font-semibold mb-3">Skills</h3>
+                <p class="text-white text-opacity-90 text-sm mb-1">
+                  Node.js/PY/Git Hub
+                  <span class="skill-level">Intermediate</span>
+                </p>
+                <div class="skill-blocks">
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                </div>
+                <p class="flip-hint">Click to flip back</p>
+              </div>
+            </div>
+          </div>
+          <div></div>
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img class="profile-pic" src="gambar/anisa n.jpg" alt="Profile Photo">
+                <div class="profile-name">Anisa</div>
+                <div class="profile-job">Mobile Developer</div>
+                <div class="mt-6 text-center card-element delay-3">
+                  <p class="text-white text-opacity-80 text-sm mb-1">📧 ANISA@gmail.com</p>
+                  <p class="text-white text-opacity-80 text-sm">📱 +62 812-3456-7890</p>
+                </div>
+                <div class="social-icons card-element delay-4">
+                  <!-- ...social icons... -->
+                </div>
+                <a href="#website" class="btn-website card-element delay-5">Visit Website</a>
+                <p class="flip-hint">Click to flip</p>
+              </div>
+              <div class="card-back">
+                <h3 class="text-white text-xl font-semibold mb-4">Tentang Saya</h3>
+                <p class="text-white text-opacity-90 text-sm mb-6">
+                  Pelajar yang sedang belajar mobile development dengan fokus Android dan Flutter.
+                </p>
+                <h3 class="text-white text-xl font-semibold mb-3">Skills</h3>
+                <p class="text-white text-opacity-90 text-sm mb-1">
+                  Flutter/Jetpack
+                  <span class="skill-level">Intermediate</span>
+                </p>
+                <div class="skill-blocks">
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block filled"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                  <span class="block"></span>
+                </div>
+                </div>
+                <p class="flip-hint">Click to flip back</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+
+<!-- BAGIAN PROJEK -->
+<div class="bagian-projek" style="background:rgba(24,28,35,0.85);padding:32px 0;">
+  <section id="projek-section" style="max-width:900px;margin:0 auto;">
+    <h2 style="color:#ffd600;font-size:2rem;font-weight:700;text-align:center;margin-bottom:24px;letter-spacing:1px;">Projek Kami</h2>
+    <div class="projek-list" style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+      <!-- Projek 1 -->
+      <div class="projek-card" style="background:#23272f;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.18);width:270px;padding:20px;display:flex;flex-direction:column;align-items:center;">
+        <img src="gambar/walpaper/walpaper Nissan S13 180sx.jpeg" alt="Projek 1" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:14px;">
+        <div style="font-size:1.15rem;font-weight:600;color:#ffd600;margin-bottom:6px;">Website Portofolio</div>
+        <div style="color:#e0f7fa;font-size:0.98rem;margin-bottom:12px;text-align:center;">
+          Website portofolio sederhana untuk menampilkan profil dan karya.
+        </div>
+        
+        <a href="https://revou-fundamental-course.github.io/07-apr-25-kitter67/" target="_blank" style="background:#ffd600;color:#23272f;padding:7px 18px;border-radius:8px;text-decoration:none;font-weight:600;">Lihat Demo</a>
+      </div>
+      <!-- Projek 2 -->
+      <div class="projek-card" style="background:#23272f;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.18);width:270px;padding:20px;display:flex;flex-direction:column;align-items:center;">
+        <img src="gambar/upacara2.jpg" alt="Projek 2" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:14px;">
+        <div style="font-size:1.15rem;font-weight:600;color:#ffd600;margin-bottom:6px;">Kumpulan tugas</div>
+        <div style="color:#e0f7fa;font-size:0.98rem;margin-bottom:12px;text-align:center;">
+          Halaman untuk tugas yang pernah guru
+        </div>
+
+        <a href="halaman projek video subtitle.html" target="_blank" style="background:#ffd600;color:#23272f;padding:7px 18px;border-radius:8px;text-decoration:none;font-weight:600;">Lihat Demo</a>
+      </div>
+      <!-- Projek 3 -->
+      <div class="projek-card" style="background:#23272f;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.18);width:270px;padding:20px;display:flex;flex-direction:column;align-items:center;">
+        <img src="gambar/bendera.jpg" alt="Projek 3" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:14px;">
+        <div style="font-size:1.15rem;font-weight:600;color:#ffd600;margin-bottom:6px;">Aplikasi Musik</div>
+        <div style="color:#e0f7fa;font-size:0.98rem;margin-bottom:12px;text-align:center;">
+          Panel pemutar musik sederhana dengan daftar lagu.
+        </div>
+
+        <a href="" target="_blank" style="background:#ffd600;color:#23272f;padding:7px 18px;border-radius:8px;text-decoration:none;font-weight:600;">Lihat Demo</a>
+      </div>
+      <!-- Projek 4 -->
+      <div class="projek-card" style="background:#23272f;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.18);width:270px;padding:20px;display:flex;flex-direction:column;align-items:center;">
+        <img src="gambar/alam.jpg" alt="Projek 4" style="width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:14px;">
+        <div style="font-size:1.15rem;font-weight:600;color:#ffd600;margin-bottom:6px;">To Do List App</div>
+        <div style="color:#e0f7fa;font-size:0.98rem;margin-bottom:12px;text-align:center;">
+          Aplikasi sederhana untuk mencatat tugas harian berbasis web.
+        </div>
+
+        <a href="" target="_blank" style="background:#ffd600;color:#23272f;padding:7px 18px;border-radius:8px;text-decoration:none;font-weight:600;">Lihat Demo</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- GALLERY FILTER & GALLERY -->
+<div class="mb-6 flex justify-center">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+        <div style="font-size:1.7rem;font-weight:700;color:#4f46e5;margin-bottom:12px;letter-spacing:1px;">Gallery</div>
+        <ul class="gallery-filter-list gallery-filter-group" style="display:flex;list-style:none;padding:0;margin:0;gap:0;">
+            <li>
+                <a href="#" id="all-btn" class="gallery-filter-link active">Semua</a>
+            </li>
+            <li>
+                <a href="#" id="horizontal-btn" class="gallery-filter-link">Horizontal</a>
+            </li>
+            <li>
+                <a href="#" id="vertical-btn" class="gallery-filter-link">Vertikal</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="gallery-container" id="gallery">
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/acara.jpg" alt="Potret">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">Potret Manusia</h3>
+            <p class="text-sm">Ekspresi yang menggambarkan cerita</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/pantai.jpg" alt="Pemandangan alam">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">Pemandangan Alam</h3>
+            <p class="text-sm">Keindahan alam yang menakjubkan</p>
+        </div>
+    </div>
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/bekerja.jpg" alt="Makanan">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">kerja lembur</h3>
+            <p class="text-sm">bekerja sampai malam karena ke asikan</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/alam.jpg" alt="Arsitektur">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">alam yang indah</h3>
+            <p class="text-sm">sejuk dan tenang</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/upacara2.jpg" alt="Pantai">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">upacara</h3>
+            <p class="text-sm">yang melambangkan cinta tanah air</p>
+        </div>
+    </div>
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/bendera.jpg" alt="Hewan">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">bendera Indonesia</h3>
+            <p class="text-sm">negara Indonesia</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/fufuyu.jpg" alt="Kota">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">karya seni </h3>
+            <p class="text-sm">karya yang memiliki makna</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/kuyukuyu.jpg" alt="Air Terjun">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">chibi</h3>
+            <p class="text-sm">style dari suatu art</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/kitter.jpg" alt="Gunung">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">karya digital</h3>
+            <p class="text-sm">lukisan yang indah dan menakjubkan</p>
+        </div>
+    </div>
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/upacra.jpg" alt="Kopi">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">suasana pagi hari</h3>
+            <p class="text-sm">suasana yang menenangkan</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/langit.jpg" alt="Bunga">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">langit </h3>
+            <p class="text-sm">Keindahan alam yang memukau</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/jalan jalan.jpg" alt="Matahari Terbenam">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">perjalanan</h3>
+            <p class="text-sm">kenangan masa lalu</p>
+        </div>
+    </div>
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/love.jpg" alt="Seni">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">Karya Seni</h3>
+            <p class="text-sm">Ekspresi kreativitas manusia</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/langit.jpg" alt="Hutan">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">langit</h3>
+            <p class="text-sm">Keindahan alam yang asri</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/upacara3.jpg" alt="Danau">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">upacara di pagi hari</h3>
+            <p class="text-sm">dengan pemandangan yang keren</p>
+        </div>
+    </div>
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/upacara4.jpg" alt="Teknologi">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">merah putih</h3>
+            <p class="text-sm">sebuah bendera dengan keberanian</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/teman lama.jpg" alt="Jalanan">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">teman lama</h3>
+            <p class="text-sm">berkunjung ke bandung</p>
+        </div>
+    </div>
+    <div class="gallery-item horizontal" data-type="horizontal">
+        <img src="gambar/acara3.jpg" alt="Langit">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">upacara adat </h3>
+            <p class="text-sm">kegiatan yang pernah di lakukan</p>
+        </div>
+    </div>
+    <!-- Tambahkan dua kotak poto baru di bawah ini -->
+    <div class="gallery-item square" data-type="horizontal">
+        <img src="gambar/acara2.jpg" alt="Mobil">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">jumat pagi</h3>
+            <p class="text-sm">dengan pagi dan keramanyan yang tenang</p>
+        </div>
+    </div>
+    <div class="gallery-item vertical" data-type="vertical">
+        <img src="gambar/teman mts.jpg" alt="Malam Hari">
+        <div class="gallery-caption">
+            <h3 class="text-lg font-semibold">teman lama</h3>
+            <p class="text-sm">kenangan masa lalu </p>
+        </div>
+    </div>
+</div> <!-- penutup .gallery-container -->
+
+<!-- KOMENTAR SECTION -->
+<section id="komentar-section" style="max-width:600px;margin:40px auto 0 auto;padding:24px 0;">
+  <h2 style="color:#ffd600;text-align:center;margin-bottom:18px;">Komentar Pengunjung</h2>
+  <form id="komentarForm" style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px;">
+    <input type="text" id="nama" placeholder="Nama" required style="padding:8px 12px;border-radius:6px;border:1px solid #444;">
+    <textarea id="pesan" placeholder="Pesan" required style="padding:8px 12px;border-radius:6px;border:1px solid #444;min-height:60px;"></textarea>
+    <button type="submit" style="background:#ffd600;color:#23272f;font-weight:600;border:none;border-radius:8px;padding:10px 0;cursor:pointer;">Kirim Komentar</button>
+  </form>
+  <div id="daftarKomentar"></div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+        <div class="lightbox-caption">
+            <h3 class="text-xl font-semibold" id="lightbox-title"></h3>
+            <p class="text-base mt-2" id="lightbox-description"></p>
+        </div>
+        <div class="lightbox-nav">
+            <button id="prev-btn">&lsaquo;</button>
+            <button id="next-btn">&rsaquo;</button>
+        </div>
+    </div>
+</div>
+
+
+  <!-- MUSIC PANEL -->
+  <div id="music" class="popup hidden">
+    <div class="popup-header">
+      <span>Music</span>
+      <button onclick="closePopup('music')">X</button>
+    </div>
+    <p class="now-playing">Yang sedang di putar</p>
+    <div class="playing" id="nowPlaying">Tidak ada musik</div>
+    <div class="music-list">
+      <button onclick="playMusic('audio/Delta Force Hackclaw.mp3', 'Delta Force Hackclaw')">Delta Force Hackclaw</button>
+      <button onclick="playMusic('audio/Imposible.mp3', 'Imposible')">Imposible</button>
+      <button onclick="playMusic('audio/Delta Force subaroso.mp3', 'Delta Force subaroso')">Delta Force subaroso</button>
+      <button onclick="playMusic('audio/Taylor Swift - Style.mp3', 'Taylor Swift - Style')">Taylor Swift - Style</button>
+      <button onclick="playMusic('audio/Pegasus Device 2022.mp3', 'Pegasus Device 2022')">Pegasus Device 2022</button>
+      <button onclick="playMusic('audio/Pegasus Device 2022.mp3', 'Pegasus Device 2022')">Pegasus Device 2022</button>
+      <!-- ...tambahkan hingga 18 tombol sesuai kebutuhan... -->
+    </div>
+    <audio id="audioPlayer" controls loop style="display:block; margin:20px auto 0 auto; width:80%;"></audio>
+  </div>
+
+  <!-- BACKGROUND PANEL -->
+
+  <!-- BACKGROUND VIDEO PANEL -->
+  <div id="backgroundVideo" class="popup hidden">
+    <div class="popup-header">
+      <span>Background Video</span>
+      <button onclick="closePopup('backgroundVideo')">X</button>
+    </div>
+    <div class="background-list">
+      <video src="video/shir.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/ahiroko.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/okusora-ayane-blue-archive-moewalls-com.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/ayane.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/kitter SQ's Video - Jun 9, 2025-VEED (3).mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/subaroso.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/kitter SQ's Video - Jun 9, 2025-VEED (1).mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/hu tao.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/kasumizawa-miyu-sniper-blue-archive-moewalls-com-VEED.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/rabbit.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/kitter SQ's Video - Jun 9, 2025-VEED.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/cina.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/kitter SQ's Video - Jun 9, 2025-VEED (2).mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/lumine.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/samurai.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/samurai.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <video src="video/tendou-alice-blue-archive-1-moewalls-com.mp4" onclick="changeBackgroundVideo(this.src)" poster="gambar/walpaper/robot.png" width="120" style="border-radius:20px;cursor:pointer;" muted></video>
+      <!-- Tambahkan video lain sesuai kebutuhan -->
+    </div>
+  </div>
+
+  <!-- TEMA PANEL -->
+  <div id="tema" class="popup hidden">
+    <div class="popup-header">
+      <span>Tema</span>
+      <button onclick="closePopup('tema')">X</button>
+    </div>
+    <p>(Belum ada konten)</p>
+  </div>
+  <script src="tes.js"></script>
+  <!-- Firebase SDK (gunakan salah satu versi, contoh compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script>
+    // Ganti dengan konfigurasi Firebase milik Anda
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPO3XrpM-k5OyevfYr8hMlk6i6C9FpX0s",
+  authDomain: "tugas-sekolah-akhir-semester.firebaseapp.com",
+  projectId: "tugas-sekolah-akhir-semester",
+  storageBucket: "tugas-sekolah-akhir-semester.firebasestorage.app",
+  messagingSenderId: "993413811941",
+  appId: "1:993413811941:web:5e9b92dd22872a92fd8e0c",
+  measurementId: "G-W35Z1TK2NK"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Submit komentar
+    document.getElementById('komentarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      if(nama && pesan) {
+        db.collection('komentar').add({
+          nama: nama,
+          pesan: pesan,
+          waktu: new Date()
+        }).then(() => {
+          document.getElementById('komentarForm').reset();
+        });
+      }
+    });
+
+    // Tampilkan komentar real-time
+    db.collection('komentar').orderBy('waktu','desc').onSnapshot(snapshot => {
+      const daftar = document.getElementById('daftarKomentar');
+      daftar.innerHTML = '';
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const div = document.createElement('div');
+        div.style = "background:#23272f;color:#fff;padding:12px 16px;border-radius:8px;margin-bottom:10px;";
+        div.innerHTML = `<strong style="color:#ffd600">${data.nama}</strong><br>${data.pesan}`;
+        daftar.appendChild(div);
+      });
+    });
+  </script>
+
+  <!-- FOOTER: Tentang Web & Copyright -->
+  <footer>
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div class="footer-section footer-tools">
+        <strong>Web ini dibuat menggunakan:</strong>
+        <div class="footer-list-box">
+          <ul class="footer-tools-list">
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/Marketing Tools - Inuri Munasinghe.jpeg" alt="Canva" class="footer-icon"/>
+                <span>Canva</span>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/Multimedia Android _Visual System _Sign In Boihasbullah 9.jpeg" alt="VS Code" class="footer-icon"/>
+                <span>VS Code</span>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/Chat Gpt Icon _ Hugeicons.jpeg" alt="ChatGPT" class="footer-icon"/>
+                <span>ChatGPT</span>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/Firebase icon logo in PNG and vector formats (SVG, AI).jpeg" alt="Firebase" class="footer-icon"/>
+                <span>Firebase</span>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/Download GitHub Logo, Git Hub Icon On White Background.jpeg" alt="GitHub" class="footer-icon"/>
+                <span>GitHub</span>
+              </div>
+            </li>
+            <li>
+              <div class="footer-icon-wrap">
+                <img src="gambar/logo/NodeJS logo.jpeg" alt="Node.js" class="footer-icon"/>
+                <span>Node.js</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-section footer-languages">
+        <strong>Bahasa pemrograman yang digunakan:</strong>
+        <div class="footer-list-box">
+          <ul class="footer-languages-list">
+            <li><img src="gambar/logo/HTML5 is a new version of the language HTML, with….jpeg" alt="HTML" class="footer-icon"/> HTML</li>
+            <li><img src="gambar/logo/CSS.jpeg" alt="CSS" class="footer-icon"/> CSS</li>
+            <li><img src="gambar/logo/JavaScript Badge with JS text.jpeg" alt="JavaScript" class="footer-icon"/> JavaScript</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:18px;font-size:1rem;color:#ffd600;">
+        &copy; Web ini dibuat oleh Kelompok 5
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

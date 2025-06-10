@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+.bgvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 2460px;
+    max-height: 1080px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bgvideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 2460px;
+    max-height: 1080px;
+    object-fit: cover;
+    z-index: 1;
+    background: #181818;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    background-image: var(--gradint_text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    color: transparent;
+    text-shadow: 3px 3px 3px rgba(210, 210, 210, 0.282);
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0, 0.7));
+    
+}
+
+h1:hover{
+    cursor: pointer;
+    animation: animation_bg 5s infinite alternate;
+}
+
+h1 {
+    text-align: center;
+    color: #faad12;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 10px;
+    width: 400px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ffbb00;
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+a {
+    color: #eba40b;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px;
+    background-color: #d7a306;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #cbc109;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bungkus {
+    background-color: #f5dd813b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(151, 124, 18, 0.696);
+}
+
+body, .data, .bgvideo {
+    max-width: 2460px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+body {
+    max-height: 1080px;
+    overflow-x: hidden;
+}
+
+/* Responsive untuk layar besar */
+@media (min-width: 1800px) {
+    html {
+        font-size: 1.15em;
+    }
+    .data {
+        width: 600px;
+    }
+}
+
+/* Responsive untuk layar sangat besar */
+@media (min-width: 2460px) {
+    html {
+        font-size: 1.22em;
+    }
+    .data {
+        width: 800px;
+    }
+}
+
+/* Responsive untuk HP */
+@media (max-width: 600px) {
+    .data {
+        width: 98vw;
+        min-width: 0;
+        padding: 6px;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, 0);
+    }
+    .bungkus {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2.1rem;
+    }
+    input[type="text"],
+    input[type="password"] {
+        font-size: 1em;
+        padding: 8px;
+    }
+    button {
+        font-size: 1em;
+        padding: 8px;
+    }
+}

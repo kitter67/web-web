@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Komentar</title>
+  <link rel="stylesheet" href="tes.css">
+</head>
+<body style="background:#181c23;color:#fff;">
+  <div style="max-width:600px;margin:40px auto 0 auto;padding:24px 0;">
+    <h2 style="color:#ffd600;text-align:center;margin-bottom:18px;">Daftar Komentar Pengunjung</h2>
+    <div id="daftarKomentar"></div>
+    <a href="tes.html" style="display:block;text-align:center;margin-top:24px;color:#ffd600;">&#8592; Kembali ke Beranda</a>
+  </div>
+  <!-- Firebase SDK -->
+  <script src=""></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script>
+    // Konfigurasi Firebase (samakan dengan tes.html)
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPO3XrpM-k5OyevfYr8hMlk6i6C9FpX0s",
+      authDomain: "tugas-sekolah-akhir-semester.firebaseapp.com",
+      projectId: "tugas-sekolah-akhir-semester",
+      storageBucket: "tugas-sekolah-akhir-semester.firebasestorage.app",
+      messagingSenderId: "993413811941",
+      appId: "1:993413811941:web:5e9b92dd22872a92fd8e0c",
+      measurementId: "G-W35Z1TK2NK"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Tampilkan komentar real-time
+    db.collection('komentar').orderBy('waktu','desc').onSnapshot(snapshot => {
+      const daftar = document.getElementById('daftarKomentar');
+      daftar.innerHTML = '';
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const div = document.createElement('div');
+        div.style = "background:#23272f;color:#fff;padding:12px 16px;border-radius:8px;margin-bottom:10px;";
+        div.innerHTML = `<strong style="color:#ffd600">${data.nama}</strong><br>${data.pesan}`;
+        daftar.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
